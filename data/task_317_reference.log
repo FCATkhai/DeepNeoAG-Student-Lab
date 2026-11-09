@@ -1,0 +1,57 @@
+Running Next-Gen PLM & Deep Learning Benchmark on mps ...
+Loaded [immunophys] shape=(5608, 35, 48)
+Loaded [tape      ] shape=(5608, 35, 768)
+Loaded [ankh_base ] shape=(5608, 35, 768)
+Loaded [esmc_300m ] shape=(5608, 35, 960)
+Loaded [esm2      ] shape=(5608, 35, 1280)
+Loaded [esm1v     ] shape=(5608, 35, 1280)
+Loaded [ProtTrans ] shape=(5608, 35, 1024)
+Loaded [prostt5   ] shape=(5608, 35, 1024)
+
+=== Experiment 1: Benchmarking All 8 PLMs (Baseline DeepScan vs LD-Tramba-ImmunoNet) ===
+  [immunophys__DeepScan (mCNN)               ] (  7.8s) | CV AUC=0.8976 | OrigTest=0.9113 | Temp-All=0.6658 (PR=0.6243) | Temp-MHC1=0.6452 | Temp-MHC2=0.8613 | Temp-Match=0.9217 | Strict30(k2)=0.6560
+  [immunophys__LD-Tramba-ImmunoNet           ] ( 54.2s) | CV AUC=0.7922 | OrigTest=0.8099 | Temp-All=0.6215 (PR=0.5459) | Temp-MHC1=0.6063 | Temp-MHC2=0.7368 | Temp-Match=0.7226 | Strict30(k2)=0.6103
+  [tape__DeepScan (mCNN)                     ] ( 62.7s) | CV AUC=0.8979 | OrigTest=0.8842 | Temp-All=0.6791 (PR=0.6201) | Temp-MHC1=0.6654 | Temp-MHC2=0.8379 | Temp-Match=0.8947 | Strict30(k2)=0.6778
+  [tape__LD-Tramba-ImmunoNet                 ] ( 60.5s) | CV AUC=0.8353 | OrigTest=0.8947 | Temp-All=0.6326 (PR=0.5777) | Temp-MHC1=0.6118 | Temp-MHC2=0.7721 | Temp-Match=0.8591 | Strict30(k2)=0.6735
+  [ankh_base__DeepScan (mCNN)                ] ( 60.4s) | CV AUC=0.8800 | OrigTest=0.9090 | Temp-All=0.7132 (PR=0.6551) | Temp-MHC1=0.6975 | Temp-MHC2=0.8541 | Temp-Match=0.8951 | Strict30(k2)=0.6839
+  [ankh_base__LD-Tramba-ImmunoNet            ] ( 60.8s) | CV AUC=0.8172 | OrigTest=0.9107 | Temp-All=0.6886 (PR=0.6167) | Temp-MHC1=0.6762 | Temp-MHC2=0.8530 | Temp-Match=0.8782 | Strict30(k2)=0.6964
+  [esmc_300m__DeepScan (mCNN)                ] ( 78.3s) | CV AUC=0.9189 | OrigTest=0.9121 | Temp-All=0.7151 (PR=0.6448) | Temp-MHC1=0.7061 | Temp-MHC2=0.8050 | Temp-Match=0.8658 | Strict30(k2)=0.6572
+  [esmc_300m__LD-Tramba-ImmunoNet            ] ( 63.6s) | CV AUC=0.8411 | OrigTest=0.8402 | Temp-All=0.6467 (PR=0.6041) | Temp-MHC1=0.6224 | Temp-MHC2=0.8022 | Temp-Match=0.8546 | Strict30(k2)=0.6816
+  [esm2__DeepScan (mCNN)                     ] (110.9s) | CV AUC=0.9065 | OrigTest=0.9146 | Temp-All=0.6993 (PR=0.6351) | Temp-MHC1=0.6909 | Temp-MHC2=0.7895 | Temp-Match=0.8951 | Strict30(k2)=0.6778
+  [esm2__LD-Tramba-ImmunoNet                 ] ( 70.5s) | CV AUC=0.8394 | OrigTest=0.8768 | Temp-All=0.6406 (PR=0.5772) | Temp-MHC1=0.6228 | Temp-MHC2=0.7800 | Temp-Match=0.8603 | Strict30(k2)=0.6801
+  [esm1v__DeepScan (mCNN)                    ] (102.2s) | CV AUC=0.8925 | OrigTest=0.8981 | Temp-All=0.6520 (PR=0.6178) | Temp-MHC1=0.6325 | Temp-MHC2=0.8363 | Temp-Match=0.9129 | Strict30(k2)=0.6875
+  [esm1v__LD-Tramba-ImmunoNet                ] ( 72.2s) | CV AUC=0.7551 | OrigTest=0.8118 | Temp-All=0.6418 (PR=0.6095) | Temp-MHC1=0.6119 | Temp-MHC2=0.7975 | Temp-Match=0.8448 | Strict30(k2)=0.6700
+  [ProtTrans__DeepScan (mCNN)                ] ( 80.6s) | CV AUC=0.9082 | OrigTest=0.9187 | Temp-All=0.7126 (PR=0.6527) | Temp-MHC1=0.7036 | Temp-MHC2=0.8379 | Temp-Match=0.9057 | Strict30(k2)=0.6698
+  [ProtTrans__LD-Tramba-ImmunoNet            ] ( 63.9s) | CV AUC=0.8491 | OrigTest=0.9169 | Temp-All=0.6631 (PR=0.6095) | Temp-MHC1=0.6398 | Temp-MHC2=0.8557 | Temp-Match=0.9062 | Strict30(k2)=0.6749
+  [prostt5__DeepScan (mCNN)                  ] ( 80.4s) | CV AUC=0.9069 | OrigTest=0.8985 | Temp-All=0.6754 (PR=0.6112) | Temp-MHC1=0.6580 | Temp-MHC2=0.8002 | Temp-Match=0.8692 | Strict30(k2)=0.6330
+  [prostt5__LD-Tramba-ImmunoNet              ] ( 63.8s) | CV AUC=0.8377 | OrigTest=0.8903 | Temp-All=0.6166 (PR=0.5838) | Temp-MHC1=0.5916 | Temp-MHC2=0.8042 | Temp-Match=0.8898 | Strict30(k2)=0.6769
+
+=== Experiment 2: Benchmarking All 5 Deep Learning Architectures across Top PLMs ===
+  [ProtTrans__Masked-MSCNN                   ] (128.8s) | CV AUC=0.8960 | OrigTest=0.9296 | Temp-All=0.6285 (PR=0.5985) | Temp-MHC1=0.6091 | Temp-MHC2=0.8684 | Temp-Match=0.9333 | Strict30(k2)=0.7072
+  [prostt5__Masked-MSCNN                     ] (117.9s) | CV AUC=0.8954 | OrigTest=0.9147 | Temp-All=0.5644 (PR=0.5556) | Temp-MHC1=0.5288 | Temp-MHC2=0.8086 | Temp-Match=0.9103 | Strict30(k2)=0.6959
+  [esm1v__Masked-MSCNN                       ] (144.8s) | CV AUC=0.8820 | OrigTest=0.9031 | Temp-All=0.6255 (PR=0.5985) | Temp-MHC1=0.6013 | Temp-MHC2=0.8312 | Temp-Match=0.9131 | Strict30(k2)=0.7077
+  [ProtTrans__BiGRU-CrossAttn                ] ( 60.7s) | CV AUC=0.8521 | OrigTest=0.9244 | Temp-All=0.6602 (PR=0.6215) | Temp-MHC1=0.6336 | Temp-MHC2=0.8343 | Temp-Match=0.9251 | Strict30(k2)=0.6706
+  [prostt5__BiGRU-CrossAttn                  ] ( 60.4s) | CV AUC=0.8629 | OrigTest=0.9057 | Temp-All=0.5699 (PR=0.5598) | Temp-MHC1=0.5351 | Temp-MHC2=0.8205 | Temp-Match=0.9008 | Strict30(k2)=0.6629
+  [esm1v__BiGRU-CrossAttn                    ] ( 64.2s) | CV AUC=0.8521 | OrigTest=0.8439 | Temp-All=0.6142 (PR=0.5639) | Temp-MHC1=0.5955 | Temp-MHC2=0.7206 | Temp-Match=0.8743 | Strict30(k2)=0.6797
+  [ProtTrans__Tramba-ImmunoNet               ] ( 62.8s) | CV AUC=0.8493 | OrigTest=0.9235 | Temp-All=0.6709 (PR=0.6243) | Temp-MHC1=0.6491 | Temp-MHC2=0.8656 | Temp-Match=0.9200 | Strict30(k2)=0.6809
+  [prostt5__Tramba-ImmunoNet                 ] ( 62.7s) | CV AUC=0.8488 | OrigTest=0.9123 | Temp-All=0.6282 (PR=0.5857) | Temp-MHC1=0.6062 | Temp-MHC2=0.7840 | Temp-Match=0.8982 | Strict30(k2)=0.6755
+  [esm1v__Tramba-ImmunoNet                   ] ( 66.5s) | CV AUC=0.7710 | OrigTest=0.8847 | Temp-All=0.5989 (PR=0.5751) | Temp-MHC1=0.5638 | Temp-MHC2=0.7947 | Temp-Match=0.8889 | Strict30(k2)=0.6842
+
+=== Experiment 3: Multimodal Fusion (PLM + ImmunoPhys-48) & NextGen Ensembles ===
+  [ProtTrans+ImmPhys__BiGRU-CrossAttn        ] ( 61.7s) | CV AUC=0.8774 | OrigTest=0.9293 | Temp-All=0.6486 (PR=0.6126) | Temp-MHC1=0.6225 | Temp-MHC2=0.8355 | Temp-Match=0.9240 | Strict30(k2)=0.6717
+  [ProtTrans+ImmPhys__Tramba-ImmunoNet       ] ( 63.9s) | CV AUC=0.8627 | OrigTest=0.9253 | Temp-All=0.6345 (PR=0.6013) | Temp-MHC1=0.6065 | Temp-MHC2=0.8383 | Temp-Match=0.9163 | Strict30(k2)=0.6678
+  [ProtTrans+ImmPhys__LD-Tramba-ImmunoNet    ] ( 64.3s) | CV AUC=0.8286 | OrigTest=0.9057 | Temp-All=0.6648 (PR=0.6121) | Temp-MHC1=0.6422 | Temp-MHC2=0.8268 | Temp-Match=0.9101 | Strict30(k2)=0.6777
+  [prostt5+ImmPhys__BiGRU-CrossAttn          ] ( 61.4s) | CV AUC=0.8658 | OrigTest=0.9196 | Temp-All=0.5754 (PR=0.5581) | Temp-MHC1=0.5433 | Temp-MHC2=0.8066 | Temp-Match=0.9066 | Strict30(k2)=0.6714
+  [prostt5+ImmPhys__Tramba-ImmunoNet         ] ( 85.8s) | CV AUC=0.8450 | OrigTest=0.9297 | Temp-All=0.6343 (PR=0.5971) | Temp-MHC1=0.6136 | Temp-MHC2=0.8121 | Temp-Match=0.9075 | Strict30(k2)=0.6808
+  [prostt5+ImmPhys__LD-Tramba-ImmunoNet      ] ( 64.3s) | CV AUC=0.8327 | OrigTest=0.9206 | Temp-All=0.6204 (PR=0.5865) | Temp-MHC1=0.5965 | Temp-MHC2=0.7923 | Temp-Match=0.8797 | Strict30(k2)=0.6591
+  [esm1v+ImmPhys__BiGRU-CrossAttn            ] ( 65.9s) | CV AUC=0.8357 | OrigTest=0.8623 | Temp-All=0.6264 (PR=0.5743) | Temp-MHC1=0.6073 | Temp-MHC2=0.7388 | Temp-Match=0.8903 | Strict30(k2)=0.6816
+  [esm1v+ImmPhys__Tramba-ImmunoNet           ] ( 67.8s) | CV AUC=0.7745 | OrigTest=0.8991 | Temp-All=0.6306 (PR=0.5887) | Temp-MHC1=0.6033 | Temp-MHC2=0.8169 | Temp-Match=0.8862 | Strict30(k2)=0.6738
+  [esm1v+ImmPhys__LD-Tramba-ImmunoNet        ] ( 67.6s) | CV AUC=0.7857 | OrigTest=0.8338 | Temp-All=0.6185 (PR=0.6002) | Temp-MHC1=0.5869 | Temp-MHC2=0.8145 | Temp-Match=0.8334 | Strict30(k2)=0.6537
+  [esm2+ImmPhys__BiGRU-CrossAttn             ] ( 65.3s) | CV AUC=0.8572 | OrigTest=0.8913 | Temp-All=0.6129 (PR=0.5614) | Temp-MHC1=0.5896 | Temp-MHC2=0.7725 | Temp-Match=0.8499 | Strict30(k2)=0.6739
+  [esm2+ImmPhys__Tramba-ImmunoNet            ] ( 67.5s) | CV AUC=0.7985 | OrigTest=0.8989 | Temp-All=0.6087 (PR=0.5686) | Temp-MHC1=0.5806 | Temp-MHC2=0.8113 | Temp-Match=0.8855 | Strict30(k2)=0.6666
+  [esm2+ImmPhys__LD-Tramba-ImmunoNet         ] ( 68.3s) | CV AUC=0.8460 | OrigTest=0.8797 | Temp-All=0.6545 (PR=0.5827) | Temp-MHC1=0.6423 | Temp-MHC2=0.7713 | Temp-Match=0.8521 | Strict30(k2)=0.6820
+  [esmc_300m+ImmPhys__BiGRU-CrossAttn        ] ( 59.9s) | CV AUC=0.8416 | OrigTest=0.8963 | Temp-All=0.6243 (PR=0.5785) | Temp-MHC1=0.6061 | Temp-MHC2=0.7915 | Temp-Match=0.8604 | Strict30(k2)=0.6864
+  [esmc_300m+ImmPhys__Tramba-ImmunoNet       ] ( 63.0s) | CV AUC=0.8461 | OrigTest=0.9066 | Temp-All=0.6336 (PR=0.5880) | Temp-MHC1=0.6058 | Temp-MHC2=0.8462 | Temp-Match=0.8785 | Strict30(k2)=0.6823
+  [esmc_300m+ImmPhys__LD-Tramba-ImmunoNet    ] ( 62.8s) | CV AUC=0.8195 | OrigTest=0.8769 | Temp-All=0.6607 (PR=0.6217) | Temp-MHC1=0.6341 | Temp-MHC2=0.8688 | Temp-Match=0.8463 | Strict30(k2)=0.6840
+  [ankh_base+ImmPhys__BiGRU-CrossAttn        ] ( 57.2s) | CV AUC=0.8328 | OrigTest=0.9281 | Temp-All=0.6723 (PR=0.6160) | Temp-MHC1=0.6604 | Temp-MHC2=0.8438 | Temp-Match=0.8917 | Strict30(k2)=0.7074
+  [ankh_base+ImmPhys__Tramba-ImmunoNet       ] ( 62.7s) | CV AUC=0.8507 | OrigTest=0.9209 | Temp-All=0.6938 (PR=0.6148) | Temp-MHC1=0.6849 | Temp-MHC2=0.8101 | Temp-Match=0.8957 | Strict30(k2)=0.7213

@@ -1,0 +1,11 @@
+torch>=2.2.0
+transformers>=4.40.0
+fair-esm>=2.0.0
+tape-proteins>=0.5
+biopython>=1.81
+scikit-learn>=1.3.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+sentencepiece>=0.1.99
+einops>=0.7.0
+requests>=2.31.0
